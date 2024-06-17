@@ -9,24 +9,30 @@
 <body>
     <div class="UI">
         <h1>Basic Calculator</h1>
+        <p>
+            This code was designed to do basic arithmetic, with an emphasis on constantly making sure the input is validated.
+            It is responsive for the use of handling multiple numbers, but keep in mind it doesn't do BIDMAS, so a statement like
+            8 + 2 * 4 would carry out 8+2 = 10, then do 10*4 = 40, instead of 8 + (2*4) = 16.
+        </p>
         <div class="calc">
             <div id="statement"></div>
             <div class="bottom">
                 <span>
-                    <button class="buttonss">9</button>
-                    <button class="buttonss">8</button>
-                    <button class="buttonss">7</button>
-                    <button class="buttonss">6</button>
-                    <button class="buttonss">5</button>
-                    <button class="buttonss">4</button>
-                    <button class="buttonss">3</button>
-                    <button class="buttonss">2</button>
-                    <button class="buttonss">1</button>
-                    <button class="buttonss">+</button>
-                    <button class="buttonss">-</button>
-                    <button class="buttonss">Divide</button>
-                    <button class="buttonss">X</button>
-                    <button type="button" class="buttonz" onclick="result()">=</button>
+                    <button class="buttonss" onclick="myFunc(1)">1</button>
+                    <button class="buttonss" onclick="myFunc(2)">2</button>
+                    <button class="buttonss" onclick="myFunc(3)">3</button>
+                    <button class="buttonss" onclick="myFunc(4)">4</button>
+                    <button class="buttonss" onclick="myFunc(5)">5</button>
+                    <button class="buttonss" onclick="myFunc(6)">6</button>
+                    <button class="buttonss" onclick="myFunc(7)">7</button>
+                    <button class="buttonss" onclick="myFunc(8)">8</button>
+                    <button class="buttonss" onclick="myFunc(9)">9</button>
+                    <button class="buttonss" onclick="myFunc('.')">.</button>
+                    <button class="buttonss" onclick="myFunc(' + ')">+</button>
+                    <button class="buttonss" onclick="myFunc(' - ')">-</button>
+                    <button class="buttonss" onclick="myFunc(' * ')">*</button>
+                    <button class="buttonss" onclick="myFunc(' / ')">/</button>
+                    <button class="buttonss" onclick="reset()">Reset</button>
                 </span>
             </div>
         </div>
