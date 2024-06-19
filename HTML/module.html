@@ -5,24 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
     <title>FinalGrade</title>
+    <script src="/logic.js"></script>
 </head>
 <body>
     <div class="UI">
         <h1><a href="/calc.html">Home</a></h1>
         <h1>Final Degree Outcome</h1>
+        <p>
+            The below calculator should be used to find the final grade for one specific year group, the weighting is in the second section.
+        </p>
         <div class="input">
-            <label for="num"></label>
-            <input type="number" name="num" id="">
+            <label for="numm"></label>
+            <input type="number" name="num" id="numm" placeholder="0">
+            <div class="result">
+                Marks:
+                <span id="markss"></span> <br> <br>
+                Average:
+                <span id="resultingNum">0.00%</span> <br> <br>
+                Degree: 
+                <span id="resultingDegree">N/A</span>
+            </div>
             <span>
-                <button>Input Value</button>
-                <button>Reset</button>
+                <button onclick="input()">Input Value</button>
+                <button onclick="resetDeg()">Reset</button>
             </span>
             <span></span>
         </div>
-        <div class="result">
-            <span id="resultingNum">0.00%</span> <br> <br> <br>
-            <span id="resultingDegree">N/A</span>
+        <div class="section2">
+            <h1 style="margin-bottom: 50px;">Weighting</h1>
+            <span>
+                <label for="y1">Year 2 weighting: </label>
+                <input type="number" name="" id="y1">
+                <label for="y2" style="margin-left: 100px;">Year 3 weighting: </label>
+                <input type="number" name="" id="y2">
+            </span> <br> <br> <br>
+            <div>
+                <label for="Y1">Year 2 average: </label>
+                <input type="number" name="" id="Y1">
+                <label for="Y2" style="margin-left: 100px;">Year 3 average: </label>
+                <input type="number" name="" id="Y2">
+            </div>
+            <button type="button" onclick="calc()" style="margin-top: 50px;">
+                Submit marks
+            </button>
+            <br> <br>
+            <div id="degree"></div>
         </div>
     </div>
+    <script src="/logic.js"></script>
 </body>
 </html>
